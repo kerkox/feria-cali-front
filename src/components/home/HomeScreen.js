@@ -16,7 +16,17 @@ export const HomeScreen = () => {
                 <audio src="https://ssl.aloncast.com:1564/" controls={true}></audio>
             </div>
             <div className="full-height">
-                <Categories title="Tendencias">
+                <Categories title="Eventos Gratuitos">
+                    <Carousel>
+                        {
+                            initialState && initialState.map(item =>
+                                <CarouselItem key={item.id}  {...item} />
+                            )
+                        }
+                    </Carousel>
+                </Categories>
+
+                <Categories title="Eventos De Pago">
                     <Carousel>
                         {
                             initialState && initialState.map(item =>

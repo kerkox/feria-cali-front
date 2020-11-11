@@ -60,7 +60,7 @@ export const RegisterScreen = ({ history }) => {
 		dispatch({
 			type: types.login,
 			payload: {
-				name: 'Paul'
+				name: 'User'
 			}
 		});
 
@@ -144,6 +144,7 @@ export const RegisterScreen = ({ history }) => {
 						fullWidth
 						variant="contained"
 						color="primary"
+						onClick={handleLogin}
 						className={classes.submit}
 					>
 						Registrarse
