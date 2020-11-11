@@ -7,7 +7,6 @@ import './HomeScreen.scss'
 
 export const HomeScreen = () => {
     const initialState = useInitialState();
-    console.log("initialState", initialState);
     return (
         <div className="">
             <div className="center">

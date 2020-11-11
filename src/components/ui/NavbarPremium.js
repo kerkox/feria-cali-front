@@ -25,7 +25,7 @@ export const NavbarPremium = () => {
                 className="navbar-brand" 
                 to="/"
             >
-                Asociaciones
+                Feria de cali
             </Link>
 
             <div className="navbar-collapse">
@@ -35,18 +35,18 @@ export const NavbarPremium = () => {
                         activeClassName="active"
                         className="nav-item nav-link" 
                         exact
-                        to="/premium/dc"
+                        to="/premium/streaming"
                     >
-                        DC
+                        Streaming Premium
                     </NavLink>
                     
                     <NavLink 
                         activeClassName="active"
                         className="nav-item nav-link" 
                         exact
-                        to="/premium/search"
+                        to="/premium/juegos"
                     >
-                        Search
+                        Juegos 
                     </NavLink>
                 </div>
             </div>

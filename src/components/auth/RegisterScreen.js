@@ -67,6 +67,9 @@ export const RegisterScreen = ({ history }) => {
 		history.replace( lastPath );
 		
 	}
+	const goToHome = () => {
+		history.replace('/');
+	}
 
 	const classes = useStyles();
 
@@ -156,6 +159,18 @@ export const RegisterScreen = ({ history }) => {
 			</div>
 			<Box mt={5}>
 				<Copyright />
+			</Box>
+			<Box mt={5}>
+				<Button
+					type="button"
+					fullWidth
+					variant="contained"
+					color="primary"
+					onClick={goToHome}
+					className={classes.submit}
+				>
+					Ir al Inicio
+							</Button>
 			</Box>
 		</Container>
 	);
