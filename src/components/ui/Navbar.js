@@ -5,12 +5,12 @@ import { types } from '../../types/types';
 
 export const Navbar = () => {
 
-    const { user:{ name }, dispatch } = useContext(AuthContext);
+    const { user, dispatch } = useContext(AuthContext);
     const history = useHistory();
 
     const handleLogout = () => {
 
-        history.replace('/auth/login');
+        history.replace('/');
 
         dispatch({
             type: types.logout
@@ -64,7 +64,7 @@ export const Navbar = () => {
                 <ul className="navbar-nav ml-auto">
 
                     <span className="nav-item nav-link text-info"> 
-                        { name }
+                        { user.name }
                     </span>
 
                     <NavLink
@@ -73,12 +73,12 @@ export const Navbar = () => {
                     >
                         iniciar sesion
                     </NavLink>
-                    {/* <button 
+                    { user.logged && <button 
                         className="nav-item nav-link btn"
                         onClick={ handleLogout }
                     > 
-                        Iniciar sesion
-                    </button> */}
+                        Cerrar sesion
+                    </button> }
                 </ul>
             </div>
         </nav>
