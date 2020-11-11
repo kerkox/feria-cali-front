@@ -13,7 +13,7 @@ export const HomeScreen = () => {
                 <h1>Home</h1>
                 <hr />
                 <h4>Emisora</h4>
-                <audio src="https://ssl.aloncast.com:1564/" autoPlay controls={true}></audio>
+                <audio src="https://ssl.aloncast.com:1564/" controls={true}></audio>
             </div>
             <div className="full-height">
                 <Categories title="Eventos Gratuitos">
