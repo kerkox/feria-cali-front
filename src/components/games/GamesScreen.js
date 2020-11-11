@@ -8,7 +8,7 @@ export const GamesScreen = ({ history }) => {
             <div className="center"> <h1>Juegos</h1></div>
             <hr />
 
-            <iframe src="https://festivaldemacetas.com/juegos/" title="juegos" class="page-complete"></iframe>
+            <iframe src="https://festivaldemacetas.com/juegos/" title="juegos" className="page-complete"></iframe>
 
         </div>
     )
