@@ -11,7 +11,7 @@ export const StreamingScreen = () => {
                 width="1193" 
                 height="671" 
                 src="https://www.youtube.com/embed/pW60WsmyeEY" 
-                frameborder="0" 
+                frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowFullScreen></iframe>
             </div>
