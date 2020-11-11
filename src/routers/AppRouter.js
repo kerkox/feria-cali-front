@@ -3,9 +3,7 @@ import {
     BrowserRouter as Router,
     Route,
     Switch,
-    Redirect
-  } from 'react-router-dom';
-
+} from 'react-router-dom';
 
 import { AuthContext } from '../auth/AuthContext';
 import { PrivateRoute } from './PrivateRoute';
@@ -22,26 +20,26 @@ export const AppRouter = () => {
 
     return (
         <Router>
-                <Switch> 
-                    <PublicRoute 
-                        path="/auth" 
-                        component={ AuthRoutes } 
-                        isAuthenticated={ user.logged }
-                    />
-                    
-                    <PrivateRoute 
-                        path="/premium" 
-                        component={ DashboardRoutes } 
-                        isAuthenticated={ user.logged }
-                    />
+            <Switch>
+                <PublicRoute
+                    path="/auth"
+                    component={AuthRoutes}
+                    isAuthenticated={user.logged}
+                />
 
-                    <Route 
-                        exact
-                        path="" 
-                        component={ MainRoutes } 
-                    />
+                <PrivateRoute
+                    path="/premium"
+                    component={DashboardRoutes}
+                    isAuthenticated={user.logged}
+                />
 
-                </Switch>
+                <Route
+                    exact
+                    path=""
+                    component={MainRoutes}
+                />
+
+            </Switch>
         </Router>
     )
 }

@@ -1,29 +1,28 @@
 import React from 'react';
-import { Navbar2 } from '../components/ui/Navbar2';
+import { Navbar } from '../components/ui/Navbar';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-import { MarvelScreen2 } from '../components/marvel/MarvelScreen2';
+import { HomeScreen } from '../components/home/HomeScreen';
 import { HeroScreen } from '../components/heroes/HeroScreen';
-import { DcScreen } from '../components/dc/DcScreen';
-import { SearchScreen } from '../components/search/SearchScreen';
+import { StreamingScreen } from '../components/streaming/StreamingScreen';
+import { GamesScreen } from '../components/games/GamesScreen';
 
 export const MainRoutes = () => {
 
 
     return (
         <>
-            <Navbar2 />
+            <Navbar />
 
-            <div className="container mt-2">
+            
                 <Switch>
-                    <Route exact path="/marvel2" component={ MarvelScreen2 } />
+                    <Route exact path="/home" component={ HomeScreen } />
                     <Route exact path="/hero2/:heroeId" component={ HeroScreen } />
-                    <Route exact path="/dc2" component={ DcScreen } />
-                    <Route exact path="/search2" component={ SearchScreen } />
+                    <Route exact path="/streaming" component={ StreamingScreen } />
+                    <Route exact path="/juegos" component={ GamesScreen } />
 
-                    <Redirect to="/marvel2" />
-                </Switch>
-            </div>
+                    <Redirect to="/home" />
+                </Switch>            
 
 
         </>

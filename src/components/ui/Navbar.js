@@ -25,7 +25,7 @@ export const Navbar = () => {
                 className="navbar-brand" 
                 to="/"
             >
-                Asociaciones
+                Feria Cali
             </Link>
 
             <div className="navbar-collapse">
@@ -35,27 +35,27 @@ export const Navbar = () => {
                         activeClassName="active"
                         className="nav-item nav-link" 
                         exact
-                        to="/premium/marvel"
+                        to="/home"
                     >
-                        Marvel
+                        Home
                     </NavLink>
 
                     <NavLink 
                         activeClassName="active"
                         className="nav-item nav-link" 
                         exact
-                        to="/premium/dc"
+                        to="/streaming"
                     >
-                        DC
+                        Streaming
                     </NavLink>
                     
                     <NavLink 
                         activeClassName="active"
                         className="nav-item nav-link" 
                         exact
-                        to="/premium/search"
+                        to="/juegos"
                     >
-                        Search
+                        Juegos
                     </NavLink>
                 </div>
             </div>
@@ -67,12 +67,18 @@ export const Navbar = () => {
                         { name }
                     </span>
 
-                    <button 
+                    <NavLink
+                        className="nav-item nav-link"
+                        to="/auth/login"
+                    >
+                        iniciar sesion
+                    </NavLink>
+                    {/* <button 
                         className="nav-item nav-link btn"
                         onClick={ handleLogout }
                     > 
-                        Logout
-                    </button>
+                        Iniciar sesion
+                    </button> */}
                 </ul>
             </div>
         </nav>

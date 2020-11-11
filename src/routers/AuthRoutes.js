@@ -1,5 +1,4 @@
 import React from 'react';
-import { Navbar2 } from '../components/ui/Navbar2';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 import { LoginScreen } from '../components/auth/LoginScreen';
