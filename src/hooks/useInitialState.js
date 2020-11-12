@@ -14,7 +14,7 @@ const useInitialState = () => {
         "year": 2009,
         "contentRating": "16+",
         "duration": 164,
-        "cover": "http://dummyimage.com/800x600.png/99118E/ffffff",
+        "cover": "https://www.aviatur.com/source/contenidos/desfile-feria-de-cali.jpg",
         "description": "Vestibulum ac est lacinia nisi venenatis tristique",
         "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
       },
@@ -27,7 +27,7 @@ const useInitialState = () => {
         "year": 2002,
         "contentRating": "16+",
         "duration": 137,
-        "cover": "http://dummyimage.com/800x600.png/302140/ffffff",
+        "cover": "https://m2.elpais.com.co/files/article_main/uploads/2019/12/25/5e0431be6710f.jpeg",
         "description": "Vestibulum ac est lacinia nisi venenatis tristique",
         "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
       },
@@ -40,7 +40,7 @@ const useInitialState = () => {
         "year": 2014,
         "contentRating": "16+",
         "duration": 163,
-        "cover": "http://dummyimage.com/800x600.png/5472FF/ffffff",
+        "cover": "https://90minutos.co/wp-content/uploads/2012/12/Bailarines20SalsC3B3dromo20Dic26_12.jpg",
         "description": "Vestibulum ac est lacinia nisi venenatis tristique",
         "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
       },
@@ -53,7 +53,7 @@ const useInitialState = () => {
         "year": 2014,
         "contentRating": "16+",
         "duration": 194,
-        "cover": "http://dummyimage.com/800x600.png/B36F20/ffffff",
+        "cover": "https://www.elespectador.com/resizer/QB9FX9qOgkSZnTPHNU11m-zfbsw=/657x0/arc-anglerfish-arc2-prod-elespectador.s3.amazonaws.com/public/NL7NUDYVDZGKDE2C55NIMZEPBM.jpg",
         "description": "Vestibulum ac est lacinia nisi venenatis tristique",
         "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
       },
@@ -66,7 +66,7 @@ const useInitialState = () => {
         "year": 2017,
         "contentRating": "16+",
         "duration": 124,
-        "cover": "http://dummyimage.com/800x600.png/CCC539/ffffff",
+        "cover": "https://www.aviatur.com/source/redes/feria-de-cali-cristo-rey-comparsas.jpg",
         "description": "Vestibulum ac est lacinia nisi venenatis tristique",
         "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
       },
@@ -79,7 +79,7 @@ const useInitialState = () => {
         "year": 2011,
         "contentRating": "16+",
         "duration": 179,
-        "cover": "http://dummyimage.com/800x600.png/FF7A90/ffffff",
+        "cover": "https://www.elpais.com.co/files/article_main/uploads/2019/12/26/5e0441abdccbb.jpeg",
         "description": "Vestibulum ac est lacinia nisi venenatis tristique",
         "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
       }
