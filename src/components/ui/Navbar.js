@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import { AuthContext } from '../../auth/AuthContext';
 import { types } from '../../types/types';
-import { makeStyles, withStyles  } from "@material-ui/core/styles"
+import { makeStyles } from "@material-ui/core/styles"
 import { List, ListItem, ListItemText } from "@material-ui/core"
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import logo from './../../assets/static/logo_feria.png'
