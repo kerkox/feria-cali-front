@@ -1,6 +1,9 @@
+@import "./settings";
+
 * {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: $theme-font;
   margin: 0;
+  box-sizing: border-box;
 }
 
 html,
