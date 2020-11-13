@@ -1,3 +1,40 @@
 .full-height {
   height: 50vh;
 }
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.section-1 {
+  background-image: linear-gradient(rgba(83, 164, 212, 0.8),
+      rgba(83, 164, 212, 0.8),
+    ),
+    url('./../../assets/static/fondo1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.section-2 {
+  height: 20vh;
+}
+
+// .section-1 {
+//   background-image: linear-gradient(
+//     rgba(83,164,212,0.8),
+//     rgba(83,164,212,0.8),
+//   ), url('./../../assets/static/fondo1.jpg');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+// .section-2 {
+
+// }
