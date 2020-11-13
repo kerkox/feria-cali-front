@@ -6,14 +6,16 @@ import useInitialState from '../../hooks/useInitialState';
 import './HomeScreen.scss'
 import home_1 from '../../assets/static/home_1.png'
 
+
 export const HomeScreen = () => {
+
 	const initialState = useInitialState();
 	return (
 		<div className="">
 			<section className="section section-1">
-				<div className="center">
-					<h1>Home</h1>
-					<img src={home_1} alt=""/>
+				<div className="center" >
+						<h1>Home</h1>
+						<img src={home_1} className="img-responsive" alt=""/>
 				</div>
 			</section>
 			<section className="section section-2">
