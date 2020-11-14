@@ -11,9 +11,10 @@ import MenuItem from '@material-ui/core/MenuItem';
 import './Navbar.scss'
 
 const navLinks = [
-	{ title: `Inicio`, path: `/home` },
-	{ title: `Streaming`, path: `/streaming` },
-	{ title: `Juegos`, path: `/juegos` },	
+	{ title: `Inicio`, path: `/home`, premium:false },
+	{ title: `Streaming`, path: `/streaming`, premium:false },
+	{ title: `Juegos`, path: `/juegos`, premium:false },
+	{ title: `Streaming Premium`, path: `/premium/streaming`, premium:true },
 ]
 
 const useStyles = makeStyles({
@@ -67,8 +68,9 @@ export const Navbar = () => {
 					aria-labelledby="main navigation"
 					className={classes.navDisplayFlex} // this
 				>
-					{navLinks.map(({ title, path }) => (
-						<NavLink 
+					{navLinks.map(({ title, path, premium }) => {
+							const show = premium ? user.logged : true
+						 return show &&  <NavLink 
 							activeClassName="active" 
 							exact 
 							to={path} 
@@ -79,8 +81,9 @@ export const Navbar = () => {
 									className="textoNav"  
 									primary={title} />
 							</ListItem>
-						</NavLink>
-					))}
+						</NavLink> 
+					}
+					)}
 				</List>
 			</div>
 			<div className="header__menu">

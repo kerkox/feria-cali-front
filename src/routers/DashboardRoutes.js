@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavbarPremium } from '../components/ui/NavbarPremium';
+import { Navbar } from '../components/ui/Navbar';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 import { StreamingScreen } from '../components/streaming/StreamingScreen';
@@ -10,7 +10,7 @@ export const DashboardRoutes = () => {
 
     return (
         <>
-            <NavbarPremium />
+            <Navbar />
                 <Switch>
                     <Route path="/premium/streaming" component={ StreamingScreen } />
                     <Route path="/premium/juegos" component={ GamesScreen } />

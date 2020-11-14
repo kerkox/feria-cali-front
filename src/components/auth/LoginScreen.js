@@ -67,12 +67,12 @@ export const LoginScreen = ({ history }) => {
 
 	const handleLogin = () => {
 
-		const lastPath = localStorage.getItem('lastPath') || '/';
+		const lastPath = localStorage.getItem('lastPath') || '/premium';
 
 		dispatch({
 			type: types.login,
 			payload: {
-				name: 'Paul'
+				name: 'User'
 			}
 		});
 
