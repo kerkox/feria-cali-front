@@ -1,16 +1,14 @@
+import './Navbar.scss'
+import SideDrawer from './SideDrawer'
 import React, { useContext } from 'react';
-import { AuthContext } from '../../auth/AuthContext';
-import { NavLink, useHistory } from 'react-router-dom';
 import { types } from '../../types/types';
 import { makeStyles } from "@material-ui/core/styles"
-import { List, ListItem, ListItemText, Hidden } from "@material-ui/core"
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import { AuthContext } from '../../auth/AuthContext';
+import { NavLink, useHistory } from 'react-router-dom';
 import logo from './../../assets/static/logo_feria.png'
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import './Navbar.scss'
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import { List, ListItem, ListItemText, Hidden, Menu, MenuItem } from "@material-ui/core"
 
-import SideDrawer from './SideDrawer'
 
 const navLinks = [
 	{ title: `Inicio`, path: `/home`, premium: false },
@@ -26,7 +24,6 @@ const useStyles = makeStyles({
 	},
 	linkText: {
 		textDecoration: `none`,
-		// textTransform: `uppercase`,
 		color: `white`,
 	},
 });

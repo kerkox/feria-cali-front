@@ -1,10 +1,9 @@
+import { Menu } from "@material-ui/icons"
+import { NavLink } from 'react-router-dom';
 import React, { useState, useContext } from "react"
 import { AuthContext } from '../../auth/AuthContext';
-import { IconButton } from "@material-ui/core"
-import { Menu } from "@material-ui/icons"
 import { makeStyles } from "@material-ui/core/styles"
-import { List, ListItem, ListItemText, Drawer } from "@material-ui/core"
-import { NavLink, useHistory } from 'react-router-dom';
+import { List, ListItem, ListItemText, Drawer, IconButton } from "@material-ui/core"
 
 const useStyles = makeStyles({
   navDisplayFlex: {
@@ -13,7 +12,6 @@ const useStyles = makeStyles({
   },
   linkText: {
     textDecoration: `none`,
-    // textTransform: `uppercase`,
     color: `black`,
   },
   list: {
@@ -23,7 +21,7 @@ const useStyles = makeStyles({
 
 
 const SideDrawer = ({navLinks }) => {
-  const { user, dispatch } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const [state, setState] = useState({ right: false }) 
   const classes = useStyles(); 
   const toggleDrawer = (anchor, open) => (event) => {
