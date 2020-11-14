@@ -8,6 +8,7 @@
   justify-content: space-between;
   top: 0px;
   width: 100%;
+  z-index: 2;
 }
 
 .header__img {
@@ -16,7 +17,9 @@
 }
 
 .header__menu {
-  margin-right: 30px;
+  margin-right: 30px;  
+  display: flex;
+  justify-content: space-between;
 }
 
 .header__menu ul {
@@ -59,12 +62,12 @@ ul:hover {
 
 .header__menu--options {
   margin-left: -10%;
-  width: 40%;
+  width: 50%;
 }
 
 .header__menu--profile img {
   margin-right: 8px;
-  width: 40px;
+  width: 80px;
 }
 
 nav > .active {
@@ -72,6 +75,6 @@ nav > .active {
 }
 
 .textoNav > span {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: bold;
 }

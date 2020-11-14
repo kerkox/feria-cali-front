@@ -13,7 +13,7 @@ export const HomeScreen = () => {
 	return (
 		<div className="">
 			<section className="section section-1">
-				<div className="center" >
+				<div className="center contenido" >
 						<h1>Home</h1>
 						<img src={home_1} className="img-responsive" alt=""/>
 				</div>

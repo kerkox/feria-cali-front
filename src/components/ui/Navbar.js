@@ -1,20 +1,22 @@
 import React, { useContext } from 'react';
-import { NavLink, useHistory } from 'react-router-dom';
 import { AuthContext } from '../../auth/AuthContext';
+import { NavLink, useHistory } from 'react-router-dom';
 import { types } from '../../types/types';
 import { makeStyles } from "@material-ui/core/styles"
-import { List, ListItem, ListItemText } from "@material-ui/core"
+import { List, ListItem, ListItemText, Hidden } from "@material-ui/core"
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import logo from './../../assets/static/logo_feria.png'
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import './Navbar.scss'
 
+import SideDrawer from './SideDrawer'
+
 const navLinks = [
-	{ title: `Inicio`, path: `/home`, premium:false },
-	{ title: `Streaming`, path: `/streaming`, premium:false },
-	{ title: `Juegos`, path: `/juegos`, premium:false },
-	{ title: `Streaming Premium`, path: `/premium/streaming`, premium:true },
+	{ title: `Inicio`, path: `/home`, premium: false },
+	{ title: `Streaming`, path: `/streaming`, premium: false },
+	{ title: `Juegos`, path: `/juegos`, premium: false },
+	{ title: `Streaming Premium`, path: `/premium/streaming`, premium: true },
 ]
 
 const useStyles = makeStyles({
@@ -25,7 +27,7 @@ const useStyles = makeStyles({
 	linkText: {
 		textDecoration: `none`,
 		// textTransform: `uppercase`,
-		color: `white`,		
+		color: `white`,
 	},
 });
 
@@ -48,7 +50,7 @@ export const Navbar = () => {
 	}
 
 	const handleLogout = () => {
-		handleClose()		
+		handleClose()
 		history.replace('/');
 
 		dispatch({
@@ -56,44 +58,48 @@ export const Navbar = () => {
 		});
 	}
 
-	const classes = useStyles(); 
+	const classes = useStyles();
 
 
 	return (
+
 		<header className="header">
 			<img className="header__img" src={logo} alt="Feria de cali" />
-			<div className="header__menu--options">
-				<List
-					component="nav"
-					aria-labelledby="main navigation"
-					className={classes.navDisplayFlex} // this
-				>
-					{navLinks.map(({ title, path, premium }) => {
+			<Hidden smDown>
+				<div className="header__menu--options">
+
+					<List
+						component="nav"
+						aria-labelledby="main navigation"
+						className={classes.navDisplayFlex} // this
+					>
+						{navLinks.map(({ title, path, premium }) => {
 							const show = premium ? user.logged : true
-						 return show &&  <NavLink 
-							activeClassName="active" 
-							exact 
-							to={path} 
-							key={title} 
-							className={classes.linkText}>
-							<ListItem button>
-								<ListItemText 
-									className="textoNav"  
-									primary={title} />
-							</ListItem>
-						</NavLink> 
-					}
-					)}
-				</List>
-			</div>
+							return show && <NavLink
+								activeClassName="active"
+								exact
+								to={path}
+								key={title}
+								className={classes.linkText}>
+								<ListItem button>
+									<ListItemText
+										className="textoNav"
+										primary={title} />
+								</ListItem>
+							</NavLink>
+						}
+						)}
+					</List>
+				</div>
+			</Hidden>
 			<div className="header__menu">
 				<div className="header__menu--profile">
 					<div className="header__menu--username">
 						{user.name}
 					</div>
 					<AccountCircleIcon onClick={handleClick} fontSize="large">
-						
-					</AccountCircleIcon>					
+
+					</AccountCircleIcon>
 				</div>
 				<Menu
 					id="simple-menu"
@@ -112,15 +118,18 @@ export const Navbar = () => {
 						horizontal: 'center',
 					}}
 				>
-					{ !user.logged && <MenuItem onClick={handleLogin}>
-							iniciar sesion						
+					{!user.logged && <MenuItem onClick={handleLogin}>
+						iniciar sesion
 						</MenuItem>
 					}
-					{ user.logged && <MenuItem onClick={handleLogout}>
+					{user.logged && <MenuItem onClick={handleLogout}>
 						Logout
 						</MenuItem>
 					}
 				</Menu>
+				<Hidden mdUp>
+					<SideDrawer navLinks={navLinks} />
+				</Hidden>
 			</div>
 		</header>
 	)
