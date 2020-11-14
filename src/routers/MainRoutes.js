@@ -8,21 +8,16 @@ import { GamesScreen } from '../components/games/GamesScreen';
 
 export const MainRoutes = () => {
 
+	return (
+		<>
+			<Navbar />
+				<Switch>
+					<Route exact path="/home" component={ HomeScreen } />
+					<Route exact path="/streaming" component={ StreamingScreen } />
+					<Route exact path="/juegos" component={ GamesScreen } />
 
-    return (
-        <>
-            <Navbar />
-
-            
-                <Switch>
-                    <Route exact path="/home" component={ HomeScreen } />
-                    <Route exact path="/streaming" component={ StreamingScreen } />
-                    <Route exact path="/juegos" component={ GamesScreen } />
-
-                    <Redirect to="/home" />
-                </Switch>            
-
-
-        </>
-    )
+					<Redirect to="/home" />
+				</Switch>            
+		</>
+	)
 }
